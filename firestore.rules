@@ -1,0 +1,130 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: books
+    // Fields: title, author, publisher, publishDate, toc, summary
+    //
+    // Collection: users
+    // Fields: uid, displayName, photoURL, isVip, stats
+    //
+    // Collection: userBooks
+    // Fields: userId, bookId, folderId, mastery, planConfig, lastActiveAt, roadmapData
+    //
+    // Collection: testSessions
+    // Fields: userId, bookId, settings, score, timestamp, answers, evaluation
+    //
+    // Collection: folders
+    // Fields: userId, name, createdAt
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        ((exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin') ||
+         (request.auth.token.email == "fuwei20210316@gmail.com" && request.auth.token.email_verified == true));
+    }
+
+    function isValidUser(data) {
+      return data.uid == request.auth.uid &&
+             data.displayName is string &&
+             data.stats is map &&
+             (!('role' in data) || isAdmin());
+    }
+
+    function isValidTestSession(data) {
+      return data.userId == request.auth.uid &&
+             data.bookId is string &&
+             data.bookTitle is string &&
+             data.score is number &&
+             data.timestamp is string;
+    }
+
+    function isValidWrongQuestion(data) {
+      return data.userId == request.auth.uid &&
+             data.bookTitle is string &&
+             data.question is string &&
+             data.wrongCount is number &&
+             data.nextReviewDate is number &&
+             data.reviewStage is number;
+    }
+
+    function isValidUserBook(data) {
+      return data.userId == request.auth.uid &&
+             data.title is string &&
+             data.author is string &&
+             (data.mastery is number || !('mastery' in data)) &&
+             (data.addedAt is number || !('addedAt' in data));
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /books/{bookId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    match /book_toc/{bookId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isOwner(userId) && isValidUser(request.resource.data);
+      allow update: if isOwner(userId) && isValidUser(request.resource.data);
+      allow delete: if isOwner(userId);
+    }
+
+    match /userBooks/{userBookId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow create: if isAuthenticated() && isValidUserBook(request.resource.data);
+      allow update: if isAuthenticated() && (resource.data.userId == request.auth.uid) && isValidUserBook(request.resource.data);
+      allow delete: if isAuthenticated() && (resource.data.userId == request.auth.uid);
+    }
+
+    match /test/connection {
+      allow read: if true;
+    }
+
+    match /testSessions/{sessionId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow create: if isAuthenticated() && isValidTestSession(request.resource.data) && request.resource.data.keys().hasAll(['userId', 'bookId', 'score', 'timestamp']);
+      allow update: if isAuthenticated() && (resource.data.userId == request.auth.uid) && isValidTestSession(request.resource.data);
+      allow delete: if isAuthenticated() && (resource.data.userId == request.auth.uid);
+    }
+
+    match /wrongQuestions/{questionId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow create: if isAuthenticated() && isValidWrongQuestion(request.resource.data) && request.resource.data.keys().hasAll(['userId', 'bookTitle', 'question', 'wrongCount', 'nextReviewDate', 'reviewStage']);
+      allow update: if isAuthenticated() && (resource.data.userId == request.auth.uid) && isValidWrongQuestion(request.resource.data);
+      allow delete: if isAuthenticated() && (resource.data.userId == request.auth.uid);
+    }
+
+    match /folders/{folderId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.uid && request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() < 50 && request.resource.data.createdAt is number;
+      allow update: if isAuthenticated() && (resource.data.userId == request.auth.uid) && request.resource.data.userId == resource.data.userId && request.resource.data.createdAt == resource.data.createdAt && request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() < 50;
+      allow delete: if isAuthenticated() && (resource.data.userId == request.auth.uid);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "彤宝阅读伙伴",
+  "description": "基于大模型的青少年深度阅读辅助与测评系统，提供书籍匹配、AI出题、答题判定及阅读能力成长追踪。",
+  "requestFramePermissions": []
+}

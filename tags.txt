@@ -1,0 +1,517 @@
+134:      <div className="relative mb-12">
+147:        <div className="relative w-24 h-24 bg-[#064e3b]/20 rounded-full flex items-center justify-center border border-[#064e3b]/30">
+153:        </div>
+154:      </div>
+156:      <div className="max-w-md space-y-8">
+157:        <div className="space-y-2">
+162:        </div>
+170:          <div className="absolute top-0 left-0 w-1 h-full bg-[#064e3b]/50" />
+179:        <div className="flex flex-col items-center gap-4">
+180:          <div className="flex justify-center gap-2">
+196:          </div>
+204:        </div>
+205:      </div>
+274:    <div 
+282:    </div>
+304:        <div className="min-h-screen bg-stone-50 flex items-center justify-center p-6">
+309:            <div className="p-4 bg-stone-100 rounded-xl text-left overflow-auto max-h-40">
+311:            </div>
+314:        </div>
+355:    <div className="flex items-center gap-1.5 text-stone-500 font-mono text-xs bg-stone-100/50 px-3 py-1.5 rounded-full">
+358:    </div>
+398:      <div className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg border border-stone-200/50 text-stone-400 animate-bounce">
+400:      </div>
+1720:      <div className="min-h-screen bg-stone-200 flex items-center justify-center sm:p-4">
+1721:        <div className="w-full max-w-[430px] h-[100dvh] sm:h-[90dvh] bg-[#fafaf9] relative overflow-hidden flex items-center justify-center shadow-2xl sm:rounded-[40px] sm:border-[12px] sm:border-stone-800">
+1723:        </div>
+1724:      </div>
+1729:    <div className="min-h-screen bg-stone-200 flex items-center justify-center sm:p-4 font-sans selection:bg-[#064e3b]/20 text-[#1c1917]">
+1730:      <div className="w-full max-w-[430px] h-[100dvh] sm:h-[90dvh] bg-[#fafaf9] relative overflow-hidden flex flex-col shadow-2xl sm:rounded-[40px] sm:border-[12px] sm:border-stone-800 transform-gpu">
+1733:            <div className="flex items-center gap-3 cursor-pointer group" onClick={() => setView('SEARCH')}>
+1734:              <div className="w-9 h-9 bg-[#064e3b] rounded-[14px] flex items-center justify-center shadow-sm shadow-[#064e3b]/10 group-hover:scale-105 transition-transform">
+1736:              </div>
+1738:            </div>
+1740:            <div className="flex items-center gap-4">
+1748:              <div className="w-9 h-9 rounded-full bg-stone-200 overflow-hidden border-2 border-white shadow-sm">
+1750:              </div>
+1754:            </div>
+1758:        <main 
+1767:          <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-[100] flex flex-col items-center justify-center text-center p-6">
+1768:            <div className="w-12 h-12 bg-[#064e3b] rounded-2xl flex items-center justify-center mb-4 animate-bounce shadow-lg shadow-[#064e3b]/20">
+1770:            </div>
+1773:          </div>
+1785:              <div className="w-28 h-28 bg-[#064e3b] rounded-[32px] flex items-center justify-center mb-10 shadow-xl shadow-[#064e3b]/20">
+1787:              </div>
+1803:                <div className="space-y-6">
+1804:                  <div className="flex items-center justify-between mb-2">
+1805:                    <div className="flex items-center gap-4">
+1816:                    </div>
+1823:                  </div>
+1826:                    <div className="flex justify-between items-start">
+1827:                      <div>
+1830:                      </div>
+1831:                      <div className={cn(
+1837:                      </div>
+1838:                    </div>
+1840:                    <div className="p-4 bg-stone-50 rounded-2xl border border-stone-100 italic text-stone-600 text-sm leading-relaxed">
+1842:                    </div>
+1844:                    <div className="flex gap-3">
+1941:                    </div>
+1943:                    <div className="space-y-4">
+1945:                      <div className="space-y-4">
+1949:                            <div key={idx} className="flex items-start gap-3">
+1951:                                <div 
+1961:                                  <div className={cn(
+1966:                                  </div>
+1967:                                </div>
+1969:                              <div className="p-4 rounded-2xl border border-stone-100 space-y-2 flex-grow">
+1970:                                <div 
+1984:                                <div className={cn(
+1989:                                </div>
+1990:                                <div className="flex-grow">
+1991:                                  <div className="flex items-center gap-2">
+1992:                                    <div className="font-medium text-stone-800 text-sm group-hover:text-[#064e3b] transition-colors">{ans.question}</div>
+2005:                                  </div>
+2006:                                  <div className="text-[9px] text-stone-300 mt-0.5 group-hover:text-[#064e3b]/60 transition-colors flex items-center gap-1">
+2009:                                  </div>
+2010:                                </div>
+2015:                              </div>
+2025:                                    <div className="pl-8 pt-2 space-y-1">
+2026:                                      <div className="text-xs text-stone-500">
+2031:                                      </div>
+2033:                                        <div className="text-xs text-stone-500">
+2038:                                        </div>
+2040:                                      <div className="mt-2 p-3 bg-stone-50 rounded-xl text-[11px] text-stone-500 leading-relaxed">
+2041:                                        <div className="flex justify-between items-center mb-1">
+2052:                                        </div>
+2054:                                      </div>
+2055:                                    </div>
+2059:                            </div>
+2060:                            </div>
+2063:                      </div>
+2064:                    </div>
+2066:                    <div className="pt-4 border-t border-stone-100">
+2070:                    </div>
+2079:                      <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 p-4 flex items-center justify-between">
+2080:                        <div className="text-sm font-medium text-stone-600">
+2082:                        </div>
+2083:                        <div className="flex gap-3">
+2115:                        </div>
+2116:                      </div>
+2119:                </div>
+2123:                <div className="space-y-8">
+2125:                    <div className="space-y-8">
+2126:                      <div className="text-center space-y-3 mt-4">
+2129:                      </div>
+2131:                      <div className="space-y-5">
+2132:                          <div className="relative group">
+2142:                            <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+2161:                            </div>
+2162:                          </div>
+2163:                      </div>
+2166:                        <div className="flex items-center gap-2 p-4 bg-red-50 text-red-600 rounded-xl text-sm">
+2169:                        </div>
+2172:                      <div className="space-y-4">
+2180:                              <div className="w-20 h-28 bg-stone-100 rounded-xl flex-shrink-0 overflow-hidden flex items-center justify-center border border-stone-200/50 shadow-inner">
+2187:                              </div>
+2188:                              <div className="flex-grow min-w-0 py-1">
+2191:                                <div className="flex gap-3 text-xs text-stone-500 mt-1.5 font-medium">
+2194:                                </div>
+2198:                              </div>
+2199:                              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-stone-50 group-hover:bg-[#064e3b]/5 transition-colors flex-shrink-0">
+2201:                              </div>
+2210:                            <div className="w-20 h-20 bg-stone-100 rounded-[24px] flex items-center justify-center mx-auto shadow-inner">
+2212:                            </div>
+2213:                            <div className="space-y-2">
+2216:                            </div>
+2219:                      </div>
+2220:                    </div>
+2224:                    <div className="space-y-6 relative">
+2225:                      <div className="sticky top-0 z-10 bg-[#fafaf9]/95 backdrop-blur-md pb-3 pt-2 border-b border-stone-200/50 flex items-center justify-between -mx-4 px-4">
+2240:                      </div>
+2242:                      <div className="space-y-6">
+2247:                          <div 
+2251:                            <div 
+2261:                            </div>
+2262:                            <div className="flex flex-col flex-1 min-w-0">
+2265:                              <div className="relative">
+2269:                                <div className="text-[10px] text-stone-400 font-bold mt-1 flex items-center">
+2272:                                </div>
+2273:                              </div>
+2274:                            </div>
+2275:                          </div>
+2282:                          <div 
+2286:                            <div className="flex items-center gap-3">
+2287:                              <div className="w-10 h-10 rounded-full bg-[#064e3b]/5 flex items-center justify-center text-[#064e3b]">
+2289:                              </div>
+2290:                              <div>
+2291:                                <div className="font-bold text-stone-800">选择语言</div>
+2292:                                <div className="text-[10px] text-stone-400">当前: {LANGUAGES.find(l => l.name === selectedLanguage)?.flag} {selectedLanguage}</div>
+2293:                              </div>
+2294:                            </div>
+2296:                          </div>
+2300:                          <div className="flex items-center justify-between">
+2305:                            <div className="flex gap-3">
+2325:                            </div>
+2326:                          </div>
+2350:                          <div 
+2372:                                  <div className="flex items-center gap-2">
+2375:                                  </div>
+2380:                          </div>
+2388:                          <div className="flex gap-3">
+2401:                          </div>
+2409:                          <div className="flex gap-3">
+2422:                          </div>
+2430:                          <div className="grid grid-cols-3 gap-2">
+2443:                          </div>
+2447:                          <div className="flex items-center justify-between p-4 bg-stone-50 rounded-2xl border border-stone-100">
+2448:                            <div>
+2449:                              <div className="text-sm font-bold text-stone-800">应试强化模式</div>
+2450:                              <div className="text-[10px] text-stone-400">侧重网络真题与高频考点 (非必选)</div>
+2451:                            </div>
+2459:                              <div className={cn(
+2464:                          </div>
+2466:                      </div>
+2468:                      <div className="sticky bottom-0 left-0 right-0 -mx-4 px-4 pt-4 pb-28 bg-[#fafaf9]/95 backdrop-blur-md border-t border-stone-200/50 z-40 mt-6">
+2469:                        <div className="max-w-2xl mx-auto">
+2478:                        </div>
+2479:                      </div>
+2480:                    </div>
+2482:                </div>
+2486:                <div className="space-y-6">
+2488:                    <div className="space-y-6">
+2489:                      <div className="flex items-center justify-between mb-2">
+2490:                        <div className="flex items-center gap-4">
+2497:                          <div>
+2500:                          </div>
+2501:                        </div>
+2513:                      </div>
+2515:                      <div className="space-y-4">
+2517:                          <div className="text-center py-20 bg-stone-50 rounded-[32px] border-2 border-dashed border-stone-200">
+2518:                            <div className="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+2520:                            </div>
+2542:                          </div>
+2545:                            <div key={record.id || i} className="flex items-center gap-3">
+2547:                                <div 
+2556:                                  <div className={cn(
+2561:                                  </div>
+2562:                                </div>
+2577:                                <div className="flex items-center gap-5">
+2578:                                  <div className="w-14 h-14 bg-stone-50 rounded-2xl flex flex-col items-center justify-center border border-stone-100 group-hover:bg-[#064e3b]/5 transition-colors">
+2579:                                    <div className="text-lg font-black text-stone-800 group-hover:text-[#064e3b]">{record.score}</div>
+2580:                                    <div className="text-[8px] font-bold text-stone-400 uppercase tracking-widest">分</div>
+2581:                                  </div>
+2582:                                  <div>
+2583:                                    <div className="font-bold text-stone-800 text-lg group-hover:text-[#064e3b] transition-colors">
+2585:                                    </div>
+2586:                                    <div className="text-xs text-stone-500 mt-1 font-medium">
+2588:                                    </div>
+2589:                                  </div>
+2590:                                </div>
+2591:                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-stone-50 group-hover:bg-[#064e3b]/5 transition-colors flex-shrink-0">
+2593:                                </div>
+2595:                            </div>
+2598:                      </div>
+2606:                          <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 p-4 flex items-center justify-between">
+2607:                            <div className="text-sm font-medium text-stone-600">
+2609:                            </div>
+2610:                            <div className="flex gap-3">
+2643:                            </div>
+2644:                          </div>
+2647:                    </div>
+2650:                      <div className="relative text-center space-y-3 mt-4">
+2661:                      </div>
+2663:                      <div className="space-y-5">
+2674:                                <div 
+2683:                                  <div className={cn(
+2688:                                  </div>
+2689:                                </div>
+2706:                                <div className="absolute top-3 right-4 text-[10px] text-stone-400 font-medium">
+2708:                                </div>
+2710:                                <div className="w-20 h-28 bg-stone-100 rounded-xl flex-shrink-0 overflow-hidden flex items-center justify-center border border-stone-200/50 shadow-inner mt-2">
+2717:                                </div>
+2718:                                <div className="flex-grow min-w-0 py-1 mt-2 pr-8">
+2720:                                  <div className="flex gap-3 text-xs text-stone-500 mt-1.5 font-medium">
+2723:                                  </div>
+2727:                                  <div className="mt-4 flex items-center justify-between w-full">
+2728:                                    <div className="flex flex-col gap-0.5">
+2729:                                      <div className="text-[10px] text-stone-400 font-bold uppercase tracking-widest">测试章节</div>
+2730:                                      <div className="text-sm font-bold text-stone-700">{ub.testedChapters.length}/{ub.toc.length}</div>
+2731:                                    </div>
+2732:                                    <div className="flex flex-col gap-0.5">
+2733:                                      <div className="text-[10px] text-stone-400 font-bold uppercase tracking-widest">测试题量</div>
+2734:                                      <div className="text-sm font-bold text-stone-700">
+2739:                                      </div>
+2740:                                    </div>
+2741:                                    <div className="flex flex-col gap-0.5">
+2742:                                      <div className="text-[10px] text-stone-400 font-bold uppercase tracking-widest">掌握度</div>
+2743:                                      <div className="text-sm font-bold text-[#064e3b]">
+2745:                                      </div>
+2746:                                    </div>
+2747:                                  </div>
+2748:                                </div>
+2761:                                <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 rounded-full bg-stone-50 group-hover:bg-[#064e3b]/5 transition-colors flex-shrink-0">
+2763:                                </div>
+2773:                            <div className="w-20 h-20 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
+2775:                            </div>
+2780:                      </div>
+2788:                          <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 p-4 flex items-center justify-between">
+2789:                            <div className="text-sm font-medium text-stone-600">
+2791:                            </div>
+2792:                            <div className="flex gap-3">
+2824:                            </div>
+2825:                          </div>
+2830:                </div>
+2836:                <div className="space-y-8">
+2837:                  <div className="flex items-center gap-6">
+2838:                    <div className="w-20 h-20 rounded-3xl bg-[#064e3b] flex items-center justify-center text-white text-3xl font-bold shadow-lg shadow-[#064e3b]/20 overflow-hidden">
+2842:                    </div>
+2843:                    <div>
+2844:                      <div className="flex items-center gap-2">
+2849:                      </div>
+2851:                      <div className="flex gap-4 mt-2">
+2855:                      </div>
+2856:                    </div>
+2857:                  </div>
+2859:                  <div className="grid grid-cols-3 gap-4">
+2861:                      <div className="text-2xl font-black text-stone-800">{profile.stats.readingCount}</div>
+2862:                      <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">阅读书籍</div>
+2865:                      <div className="text-2xl font-black text-stone-800">{records.length}</div>
+2866:                      <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">完成测试</div>
+2869:                      <div className="text-2xl font-black text-stone-800">{profile.stats.averageScore}%</div>
+2870:                      <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">平均正确率</div>
+2872:                  </div>
+2876:                    <div className="grid grid-cols-1 gap-4">
+2879:                        <div className="h-[250px]">
+2894:                        </div>
+2899:                        <div className="h-[250px]">
+2914:                        </div>
+2916:                    </div>
+2921:                    <div className="grid grid-cols-4 gap-4">
+2928:                        <div key={badge.id} className={cn(
+2932:                          <div className={cn(
+2937:                          </div>
+2939:                        </div>
+2941:                    </div>
+2943:                </div>
+2958:              <div className="absolute top-0 left-0 right-0 bg-white/80 backdrop-blur-xl border-b border-stone-200/50 p-4 z-[60]">
+2959:                <div className="max-w-2xl mx-auto flex items-center justify-between">
+2960:                  <div className="flex items-center gap-4">
+2961:                    <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
+2963:                    </div>
+2964:                    <div className="w-32 h-1 bg-stone-100 rounded-full overflow-hidden">
+2965:                      <div 
+2969:                    </div>
+2970:                  </div>
+2971:                  <div className="flex items-center gap-5">
+2982:                  </div>
+2983:                </div>
+2984:              </div>
+2986:              <div className="mt-24 px-4">
+2988:                  <div className="flex items-center justify-between mb-8">
+2989:                    <div className="flex gap-2">
+3001:                    </div>
+3018:                  </div>
+3024:                  <div className="space-y-3 flex-grow">
+3072:                  </div>
+3074:              </div>
+3076:              <div className="absolute bottom-0 left-0 right-0 p-6 bg-white/80 backdrop-blur-xl border-t border-stone-200/50 z-[70]">
+3077:                <div className="max-w-2xl mx-auto flex flex-row gap-3">
+3078:                  <div className="flex flex-1 gap-3 sm:gap-4">
+3086:                    ) : <div className="flex-1" />}
+3118:                  </div>
+3126:                </div>
+3127:              </div>
+3131:                <div className="fixed inset-0 bg-black/50 z-[100] flex items-center justify-center p-4">
+3132:                  <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-xl">
+3137:                    <div className="flex gap-3">
+3153:                    </div>
+3154:                  </div>
+3155:                </div>
+3168:              <div id="result-poster" className="bg-white p-8 rounded-[32px] border border-stone-200/60 shadow-sm space-y-8 relative overflow-hidden">
+3169:                <div className="absolute top-0 right-0 w-64 h-64 bg-[#064e3b]/5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
+3170:                <div className="text-center space-y-5 relative z-10">
+3171:                  <div className="inline-flex items-center justify-center w-24 h-24 bg-[#064e3b]/5 text-[#064e3b] rounded-full mb-2">
+3173:                  </div>
+3175:                  <div className="grid grid-cols-2 gap-4 py-6 border-y border-stone-100">
+3176:                    <div className="text-center">
+3177:                      <div className="text-3xl font-black text-[#064e3b] mb-1">{sessionResult.score}</div>
+3178:                      <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">得分</div>
+3179:                    </div>
+3180:                    <div className="text-center">
+3181:                      <div className="text-3xl font-black text-[#064e3b] mb-1">{sessionResult.correctRate}%</div>
+3182:                      <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">正确率</div>
+3183:                    </div>
+3184:                    <div className="text-center">
+3185:                      <div className="text-3xl font-black text-[#064e3b]/80 mb-1">{sessionResult.completionRate}%</div>
+3186:                      <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">完成度</div>
+3187:                    </div>
+3188:                    <div className="text-center">
+3189:                      <div className="text-3xl font-black text-stone-700 mb-1">{Math.floor((sessionResult.timeUsed || 0) / 60)}:{(sessionResult.timeUsed || 0) % 60}</div>
+3190:                      <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">用时</div>
+3191:                    </div>
+3192:                  </div>
+3193:                </div>
+3197:                  <div className="h-[280px]">
+3212:                  </div>
+3216:                  <div className="flex justify-between items-start mb-4">
+3218:                      <div className="w-1.5 h-4 bg-[#064e3b] rounded-full" />
+3230:                  </div>
+3235:                <div className="pt-8 border-t border-stone-100 flex items-center justify-between gap-6">
+3236:                  <div className="space-y-2">
+3237:                    <div className="flex items-center gap-2 text-[#064e3b] font-bold text-sm">
+3238:                      <div className="w-1.5 h-1.5 bg-[#064e3b] rounded-full" />
+3240:                    </div>
+3245:                  </div>
+3246:                  <div className="p-2 bg-white border border-stone-100 rounded-2xl shadow-sm">
+3261:                  </div>
+3262:                </div>
+3263:              </div>
+3265:              <div className="space-y-6">
+3275:                      <div className="flex items-start justify-between mb-6">
+3276:                        <div className="space-y-3">
+3277:                          <div className="flex gap-2 items-center">
+3290:                          </div>
+3292:                        </div>
+3304:                      </div>
+3306:                      <div className="space-y-3 mb-8">
+3308:                          <div key={idx} className="text-[13px] text-stone-500 flex gap-3 items-start">
+3311:                          </div>
+3313:                      </div>
+3315:                      <div className="grid grid-cols-1 gap-3 text-sm mb-6">
+3316:                        <div className="p-4 bg-stone-50 rounded-2xl border border-stone-100">
+3321:                        </div>
+3322:                        <div className="p-4 bg-[#064e3b]/5 rounded-2xl border border-[#064e3b]/10">
+3327:                        </div>
+3328:                      </div>
+3329:                      <div className="text-sm text-stone-600 bg-stone-50 p-5 rounded-2xl border border-stone-100">
+3330:                        <div className="flex justify-between items-center mb-2">
+3331:                          <div className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">正确解析</div>
+3341:                        </div>
+3343:                      </div>
+3347:              </div>
+3349:              <div className="h-28" /> {/* Spacer for fixed button */}
+3351:              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-white/80 backdrop-blur-xl border-t border-stone-200/50 z-50">
+3352:                <div className="max-w-2xl mx-auto space-y-4 px-4">
+3354:                    <div className="flex items-center gap-2 p-3 bg-red-50 text-red-600 rounded-xl text-sm mb-2">
+3357:                    </div>
+3370:                  <div className={cn(
+3425:                  </div>
+3444:                </div>
+3445:              </div>
+3453:            <div className="absolute inset-0 z-[100] flex items-center justify-center p-4">
+3467:                <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6 mx-auto">
+3469:                </div>
+3474:                <div className="flex flex-col gap-3">
+3481:                </div>
+3483:            </div>
+3490:            <div className="absolute inset-0 z-[100] flex items-center justify-center p-4">
+3504:                <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6 mx-auto">
+3506:                </div>
+3513:                <div className="flex flex-col gap-3">
+3533:                </div>
+3535:            </div>
+3542:            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+3556:                <div className="w-20 h-28 bg-stone-100 rounded-xl mx-auto mb-6 shadow-md overflow-hidden border border-stone-200">
+3563:                </div>
+3567:                <div className="grid grid-cols-2 gap-4">
+3585:                    <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+3587:                    </div>
+3600:                    <div className="w-12 h-12 rounded-2xl bg-stone-200/50 flex items-center justify-center group-hover:scale-110 transition-transform">
+3602:                    </div>
+3605:                </div>
+3614:            </div>
+3621:            <div className="absolute inset-0 z-[100] flex items-center justify-center p-4">
+3635:                <div className="bg-[#064e3b] p-6 text-white relative flex gap-5">
+3642:                  <div className="w-20 h-28 bg-white/20 rounded-lg flex-shrink-0 overflow-hidden shadow-lg">
+3650:                  </div>
+3651:                  <div className="flex flex-col justify-end">
+3653:                    <div className="flex flex-col gap-0.5 text-white/80 text-xs">
+3656:                    </div>
+3657:                  </div>
+3658:                </div>
+3659:                <div className="p-6 space-y-4 max-h-[40vh] overflow-y-auto scrollbar-thin scrollbar-thumb-stone-200">
+3660:                  <div>
+3661:                    <div className="flex justify-between items-center mb-2">
+3672:                    </div>
+3673:                    <div className="text-stone-700 leading-relaxed space-y-3 text-xs">
+3677:                    </div>
+3678:                  </div>
+3679:                </div>
+3680:                <div className="p-4 bg-stone-50 border-t border-stone-100 flex flex-col gap-2">
+3690:                </div>
+3692:            </div>
+3701:            <div className="max-w-2xl mx-auto flex justify-between items-center">
+3732:            </div>
+3750:              <div className="flex items-start gap-4 mb-6">
+3751:                <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center shrink-0">
+3753:                </div>
+3754:                <div>
+3768:                </div>
+3769:              </div>
+3770:              <div className="flex gap-3">
+3789:              </div>
+3814:                <div className="p-4 border-b border-stone-100 flex items-center justify-between sticky top-0 bg-white z-10">
+3822:                </div>
+3825:                <div className="flex-1 overflow-y-auto p-6 space-y-8 scrollbar-thin scrollbar-thumb-stone-100">
+3827:                  <div className="flex flex-col items-center text-center space-y-4">
+3828:                    <div className="w-32 h-48 rounded-xl overflow-hidden shadow-xl border border-stone-100">
+3835:                    </div>
+3836:                    <div className="space-y-1">
+3839:                    </div>
+3840:                  </div>
+3843:                  <div className="grid grid-cols-1 gap-3 bg-stone-50 p-4 rounded-2xl border border-stone-100">
+3844:                    <div className="flex justify-between text-sm">
+3847:                    </div>
+3848:                    <div className="flex justify-between text-sm">
+3851:                    </div>
+3852:                    <div className="flex justify-between text-sm">
+3855:                    </div>
+3856:                  </div>
+3859:                  <div className="space-y-4">
+3860:                    <div className="flex items-center justify-between">
+3883:                    </div>
+3884:                    <div className="text-stone-600 leading-relaxed text-sm bg-stone-50/50 p-4 rounded-2xl border border-stone-50">
+3888:                    </div>
+3889:                  </div>
+3890:                </div>
+3893:                <div className="p-4 border-t border-stone-100 bg-stone-50/50">
+3900:                </div>
+3924:                <div className="flex flex-col items-center gap-2">
+3925:                  <div className="w-12 h-1.5 bg-stone-200 rounded-full mb-2 sm:hidden" />
+3928:                </div>
+3930:                <div className="grid grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto p-1">
+3949:                </div>
+3980:                <div className="p-4 border-b border-stone-100 flex items-center justify-between bg-white sticky top-0 z-10">
+3981:                  <div className="flex items-center gap-2">
+3982:                    <div className="w-8 h-8 bg-[#064e3b] rounded-xl flex items-center justify-center">
+3984:                    </div>
+3986:                  </div>
+3993:                </div>
+3996:                <div className="flex-1 overflow-y-auto p-4 bg-stone-100/50">
+3997:                  <div className="relative group">
+4003:                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+4004:                      <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-medium border border-white/30">
+4006:                      </div>
+4007:                    </div>
+4008:                  </div>
+4009:                </div>
+4012:                <div className="p-6 bg-white space-y-4">
+4013:                  <div className="grid grid-cols-2 gap-3">
+4053:                  </div>
+4055:                  <div className="text-center">
+4060:                  </div>
+4061:                </div>
+4083:                <div className="space-y-2">
+4086:                </div>
+4088:                <div className="bg-stone-50 p-6 rounded-3xl inline-block border border-stone-100">
+4103:                </div>
+4105:                <div className="space-y-3">
+4121:                </div>
+4123:                <div className="pt-4 border-t border-stone-100">
+4128:                </div>
+4141:            <div className="fixed inset-0 z-[200] flex items-center justify-center pointer-events-none p-4">
+4159:            </div>
+4162:      </main>
+4163:      </div>
+4164:    </div>

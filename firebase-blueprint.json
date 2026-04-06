@@ -1,0 +1,159 @@
+{
+  "entities": {
+    "Book": {
+      "title": "书籍元数据",
+      "description": "存储书籍的核心信息及目录结构",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "书名" },
+        "author": { "type": "string", "description": "作者" },
+        "publisher": { "type": "string", "description": "出版社" },
+        "publishDate": { "type": "string", "description": "出版时间" },
+        "toc": { "type": "array", "items": { "type": "string" }, "description": "目录信息" },
+        "summary": { "type": "string", "description": "AI生成的简介" }
+      },
+      "required": ["title", "author", "toc"]
+    },
+    "User": {
+      "title": "用户信息",
+      "description": "存储用户基础信息及阅读能力统计",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "用户唯一ID" },
+        "displayName": { "type": "string", "description": "昵称" },
+        "photoURL": { "type": "string", "description": "头像" },
+        "isVIP": { "type": "boolean", "description": "是否为VIP用户" },
+        "profile": {
+          "type": "object",
+          "properties": {
+            "ageGroup": { "type": "string", "description": "年龄段 (如: 少年, 青年, 中年, 老年)" },
+            "readingPurpose": { "type": "string", "description": "阅读目的 (如: 考试考证, 学术研究, 兴趣爱好, 职业提升)" },
+            "expertiseLevel": { "type": "string", "description": "专业程度 (如: 入门, 进阶, 专家)" }
+          }
+        },
+        "stats": {
+          "type": "object",
+          "properties": {
+            "readingCount": { "type": "number", "description": "累计阅读书籍数" },
+            "totalQuestions": { "type": "number", "description": "累计答题数" },
+            "averageScore": { "type": "number", "description": "平均正确率" },
+            "abilityRadar": {
+              "type": "object",
+              "properties": {
+                "memory": { "type": "number" },
+                "understanding": { "type": "number" },
+                "reasoning": { "type": "number" },
+                "dialectic": { "type": "number" },
+                "expression": { "type": "number" },
+                "appreciation": { "type": "number" }
+              }
+            }
+          }
+        }
+      },
+      "required": ["uid"]
+    },
+    "UserBook": {
+      "title": "用户书架书籍",
+      "description": "存储用户在书架中的书籍状态及阅读计划",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "用户ID" },
+        "title": { "type": "string", "description": "书名" },
+        "author": { "type": "string", "description": "作者" },
+        "publisher": { "type": "string", "description": "出版社" },
+        "summary": { "type": "string", "description": "摘要" },
+        "toc": { "type": "array", "items": { "type": "string" }, "description": "目录" },
+        "testedChapters": { "type": "array", "items": { "type": "string" }, "description": "已测试章节" },
+        "completionRate": { "type": "number", "description": "完成率" },
+        "averageScore": { "type": "number", "description": "平均分" },
+        "mastery": { "type": "number", "description": "掌握度" },
+        "addedAt": { "type": "number", "description": "添加时间" },
+        "isDeleted": { "type": "boolean", "description": "是否已删除" }
+      },
+      "required": ["userId", "title", "author"]
+    },
+    "Folder": {
+      "title": "书架文件夹",
+      "description": "存储用户创建的文件夹信息",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "用户ID" },
+        "name": { "type": "string", "description": "文件夹名称" },
+        "createdAt": { "type": "number", "description": "创建时间" }
+      },
+      "required": ["userId", "name"]
+    },
+    "TestSession": {
+      "title": "答题记录",
+      "description": "记录每次答题的详细数据",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "用户ID" },
+        "bookId": { "type": "string", "description": "书籍ID" },
+        "bookTitle": { "type": "string", "description": "书名" },
+        "settings": {
+          "type": "object",
+          "properties": {
+            "range": { "type": "array", "items": { "type": "string" } },
+            "count": { "type": "number" },
+            "type": { "type": "string" },
+            "bias": { "type": "string" },
+            "examMode": { "type": "boolean" }
+          }
+        },
+        "score": { "type": "number", "description": "得分" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "question": { "type": "string" },
+              "userAnswer": { "type": "string" },
+              "correctAnswer": { "type": "string" },
+              "isCorrect": { "type": "boolean" },
+              "analysis": { "type": "string" }
+            }
+          }
+        },
+        "evaluation": { "type": "string", "description": "AI综合评价" }
+      },
+      "required": ["userId", "bookId", "bookTitle", "score", "timestamp"]
+    },
+    "WrongQuestion": {
+      "title": "错题记录",
+      "description": "存储用户答错的题目及复习状态",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "用户ID" },
+        "bookTitle": { "type": "string", "description": "书名" },
+        "question": { "type": "string", "description": "题目内容" },
+        "options": { "type": "array", "items": { "type": "string" } },
+        "correctAnswer": { "type": "string" },
+        "userAnswer": { "type": "string" },
+        "isMultiple": { "type": "boolean" },
+        "analysis": { "type": "string" },
+        "bias": { "type": "string" },
+        "source": { "type": "string" },
+        "wrongCount": { "type": "number" },
+        "nextReviewDate": { "type": "number" },
+        "reviewStage": { "type": "number" },
+        "interval": { "type": "number" },
+        "repetition": { "type": "number" },
+        "efactor": { "type": "number" },
+        "createdAt": { "type": "number" },
+        "status": { "type": "string" }
+      },
+      "required": ["userId", "bookTitle", "question", "wrongCount", "nextReviewDate", "reviewStage"]
+    }
+  },
+  "firestore": {
+    "/books/{bookId}": { "schema": "Book", "description": "书籍知识库" },
+    "/users/{userId}": { "schema": "User", "description": "用户资料" },
+    "/userBooks/{userBookId}": { "schema": "UserBook", "description": "用户书架书籍" },
+    "/folders/{folderId}": { "schema": "Folder", "description": "用户书架文件夹" },
+    "/testSessions/{sessionId}": { "schema": "TestSession", "description": "答题流水记录" },
+    "/wrongQuestions/{questionId}": { "schema": "WrongQuestion", "description": "错题本记录" }
+  }
+}
